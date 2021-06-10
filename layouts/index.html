@@ -1,0 +1,56 @@
+{{ define "main" }}
+<section class="bg-dark text-white pt-5">
+	<div class="container">
+		<div class="row d-flex align-items-center justify-content-between">
+			<div class="col-md-6 h-auto">
+				<h1>{{ .Title }}</h3>
+				<p class="description text-warning my-4">{{ .Description }}</p>
+			</div>
+			<div class="col-md-6">
+				<img src="/img/home-hero.svg" alt="" class="image-fluid w-100">
+			</div>
+		</div>
+	</div>
+</section>
+<section class="bg-info py-3">
+	<div class="container">
+		<h3 class="text-center fw-bold text-white mb-5">Latest Articles</h3>
+		{{ range $index, $item := first 5 .Site.RegularPages }}
+			{{ if eq $index 0}}
+				<div class="card">
+					<div class="row">
+						<div class="col-sm-5">
+							<img src='{{ $item.Param "src" }}' alt="fancy image" class="image-fluid w-100 h-100">
+						</div>
+						<div class="col-sm-7">
+							<div class="card-body">
+								<div class="card-title">
+									{{ range $category := $item.Params.categories }}
+										<span class="btn btn-warning btn-sm mb-2">{{ $category }}</span>
+									{{ end }}
+									<h4>
+										{{ $item.Title }}
+									</h4>
+								</div>
+								<div class="card-text mb-2 d-flex gap-2">
+									{{ range $tag := $item.Params.tags }}
+										<span class="btn btn-outline-secondary btn-sm">
+											{{ $tag }}
+										</span>
+									{{ end }}
+								</div>
+								<div class="card-text my-3">{{ $item.Summary }}</div>
+								<a href="{{ $item.Permalink }}" class="btn btn-danger">
+									Read more
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			{{ else }}
+
+			{{ end }}
+		{{ end }}
+	</div>
+</section>
+{{ end }}
