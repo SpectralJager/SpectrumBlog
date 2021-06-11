@@ -3,8 +3,8 @@
 	<div class="container">
 		<div class="row d-flex align-items-center justify-content-between">
 			<div class="col-md-6 h-auto">
-				<h1>{{ .Title }}</h3>
-				<p class="description text-warning my-4">{{ .Description }}</p>
+				<h1>{{ .Title }}</h1>
+				<p class="description text-warning my-4 lead">{{ .Description }}</p>
 			</div>
 			<div class="col-md-6">
 				<img src="/img/home-hero.svg" alt="" class="image-fluid w-100">
@@ -12,45 +12,80 @@
 		</div>
 	</div>
 </section>
-<section class="bg-info py-3">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#212529" fill-opacity="1" d="M0,192L48,208C96,224,192,256,288,240C384,224,480,160,576,154.7C672,149,768,203,864,202.7C960,203,1056,149,1152,138.7C1248,128,1344,160,1392,176L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+<section>
 	<div class="container">
-		<h3 class="text-center fw-bold text-white mb-5">Latest Articles</h3>
+		<h3 class="text-center fw-bold mb-5">Latest Articles</h3>
+		<div class="row g-1">
 		{{ range $index, $item := first 5 .Site.RegularPages }}
-			{{ if eq $index 0}}
-				<div class="card">
-					<div class="row">
-						<div class="col-sm-5">
-							<img src='{{ $item.Param "src" }}' alt="fancy image" class="image-fluid w-100 h-100">
-						</div>
-						<div class="col-sm-7">
-							<div class="card-body">
-								<div class="card-title">
-									{{ range $category := $item.Params.categories }}
-										<span class="btn btn-warning btn-sm mb-2">{{ $category }}</span>
-									{{ end }}
-									<h4>
-										{{ $item.Title }}
-									</h4>
-								</div>
-								<div class="card-text mb-2 d-flex gap-2">
-									{{ range $tag := $item.Params.tags }}
-										<span class="btn btn-outline-secondary btn-sm">
-											{{ $tag }}
-										</span>
-									{{ end }}
-								</div>
-								<div class="card-text my-3">{{ $item.Summary }}</div>
-								<a href="{{ $item.Permalink }}" class="btn btn-danger">
-									Read more
+		{{ if eq $index 0}}
+		<div class="card bg-dark text-white">
+			<div class="row">
+				<div class="col-lg-5">
+					<img src='{{ $item.Param "src" }}' alt="fancy image" class="image-fluid w-100 h-100">
+				</div>
+				<div class="col-lg-7">
+					<div class="card-body">
+						<div class="card-title">
+							{{ range $category := $item.Params.categories }}
+								<a href=""  class="btn btn-warning btn-sm mb-2">
+									{{ $category }}
 								</a>
-							</div>
+							{{ end }}
+							<a href="{{ $item.Permalink }}" class="text-decoration-none text-start btn btn-outline-light">
+								<h4 >
+									{{ $item.Title }}
+								</h4>
+							</a>
+							<span class="text-muted">
+								{{ $item.Params.date.Format "Sunday, 01-2006" }}
+							</span>
 						</div>
+						<div class="card-text mb-2 d-flex gap-2">
+							{{ range $tag := $item.Params.tags }}
+								<span class="btn btn-outline-secondary btn-sm">
+									{{ $tag }}
+								</span>
+							{{ end }}
+						</div>
+						<div class="card-text my-3">{{ $item.Summary }}</div>
 					</div>
 				</div>
-			{{ else }}
-
-			{{ end }}
+			</div>
+		</div>
+		{{ else }}
+		<div class="col-md-6 col-lg-3">
+			<div class="card bg-dark text-white ">
+				<img src='{{ $item.Param "src" }}' alt="fancy image" class="image-fluid w-100 h-100">
+				<div class="card-body">
+					<div class="card-title">
+						{{ range $category := $item.Params.categories }}
+							<a href=""  class="btn btn-warning btn-sm mb-2">
+								{{ $category }}
+							</a>
+						{{ end }}
+						<a href="{{ $item.Permalink }}" class="text-decoration-none text-start btn btn-outline-light">
+								<h4 >
+									{{ $item.Title }}
+								</h4>
+							</a>
+						<span class="text-muted">
+							{{ $item.Params.date.Format "Sunday, 01-2006" }}
+						</span>
+					</div>
+					<div class="card-text mb-2 d-flex gap-2">
+						{{ range $tag := $item.Params.tags }}
+							<span class="btn btn-outline-secondary btn-sm">
+								{{ $tag }}
+							</span>
+						{{ end }}
+					</div>
+				</div>
+			</div>
+		</div>
 		{{ end }}
+		{{ end }}
+		</div>
 	</div>
 </section>
 {{ end }}

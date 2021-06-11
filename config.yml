@@ -1,7 +1,9 @@
 baseURL: "http://example.org/"
 languageCode: "en-us"
 title: "SpectrumBlog"
-
+taxonomies:
+  category: categories
+  tag: tags
 
 ## navigation
 sectionPagesMenu: "main"
@@ -22,15 +24,15 @@ menu:
     
     
     - name: InfoSec
-      url: /infosec/
+      url: /posts/infosec/
       parent: posts
     
     - name: Programming
-      url: /programming/
+      url: /posts/programming/
       parent: posts
 
     - name: Neurobiology
-      url: /neurobiology/
+      url: /posts/neurobiology/
       parent: posts
 
     
