@@ -20,19 +20,7 @@ menu:
 
     - identifier: posts
       name: Posts
+      url: /posts
       weight: 3
     
-    
-    - name: InfoSec
-      url: /posts/infosec/
-      parent: posts
-    
-    - name: Programming
-      url: /posts/programming/
-      parent: posts
-
-    - name: Neurobiology
-      url: /posts/neurobiology/
-      parent: posts
-
     

@@ -28,7 +28,7 @@
 					<div class="card-body">
 						<div class="card-title">
 							{{ range $category := $item.Params.categories }}
-								<a href=""  class="btn btn-warning btn-sm mb-2">
+								<a href="/posts/{{ $category }}/"  class="btn btn-warning btn-sm mb-2">
 									{{ $category }}
 								</a>
 							{{ end }}
@@ -60,7 +60,7 @@
 				<div class="card-body">
 					<div class="card-title">
 						{{ range $category := $item.Params.categories }}
-							<a href=""  class="btn btn-warning btn-sm mb-2">
+							<a href="/posts/{{ $category }}/"  class="btn btn-warning btn-sm mb-2">
 								{{ $category }}
 							</a>
 						{{ end }}
