@@ -24,7 +24,7 @@
 			{{ range .Site.Menus.main }}
 			<li class="nav-item mb-2">
 				<a class="btn btn-outline-success w-100 text-start" href="{{ .URL }}">
-					{{ .Name }}
+					{{ .Name | safeHTML }}
 				</a>
 			</li>
 			{{ end }}

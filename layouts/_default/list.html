@@ -1,6 +1,6 @@
 {{ define "main" }}
 <div class="container py-5 mt-5">
-	<h1>Latest: {{ .Title }}</h1>
+	<h1>- {{ .Title }}</h1>
 	{{ $paginator := .Paginate (where .Pages "Type" "posts") }}
 	{{ partial "paginator" $paginator }}	
 	<div class="row gy-2 gx-0">

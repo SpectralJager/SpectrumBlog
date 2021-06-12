@@ -2,11 +2,25 @@ baseURL: "http://example.org/"
 languageCode: "en-us"
 title: "SpectrumBlog"
 
+params:
+  author: Spectral Jager
+  description: informational and educational resource about Programming and CS, Information Security and Neurobiology. 
+  links:
+    - name: Twitter
+      link: https://twitter.com/SpectrumUnkn
+      icon: <i class="bi bi-twitter"></i>
+    - name: GitHub
+      link: https://github.com/SpectralJager
+      icon: <i class="bi bi-github"></i>
+    - name: LinkedIn
+      link: https://www.linkedin.com/in/spectraljager
+      icon: <i class="bi bi-linkedin"></i>
+
 paginate: 4
 
 menu:
   main:
-    - name: posts
+    - name: <i class="bi bi-stickies me-2"></i> posts
       url: "/posts"
       weight: 1
     

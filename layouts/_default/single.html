@@ -1,6 +1,6 @@
 {{ define "main" }}
 <div class="h-auto">
-	<img src="{{ .Params.img }}" class="image-fluid w-100" style="position: absolute; top: 0;">
+	<img src="{{ .Params.img }}" class="image-fluid w-100" style="position: fixed; top: 0;">
 	<div class="container p-sm-5 p-3 bg-light rounded" style="position: relative; z-index: 10; top: 20vh;">
 		<h1>{{ .Title }}</h1>
 		<p class="fs-4 text-muted">{{ .PublishDate.Format "January 02, 2006" }}</p>
@@ -12,6 +12,9 @@
 		<div class="fs-5">
 			{{ .Content }}
 		</div>
+		<p class="fs-5 text-muted fw-bold mt-5">
+			Author: {{ .Params.Author }}
+		</p>
 	</div>
 </div>
 {{ end }}
