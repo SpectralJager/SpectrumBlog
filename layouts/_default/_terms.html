@@ -1,0 +1,8 @@
+{{ define "main"}}
+<h1>{{ .Title }}</h1>
+{{ $siteUrl := .Site.BaseURL }}
+{{ $plural := .Data.Plural }}
+{{ range .Data.Pages }}
+	<a href="{{ .Permalink }}">{{ .Name }}</a>
+{{ end }}
+{{ end }}

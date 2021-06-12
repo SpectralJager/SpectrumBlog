@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expanded navbar-dark bg-dark fixed-top">
+	<div class="container">
+		<a class="navbar-brand" href="/">{{ .Site.Title }}</a>
+	<button class="navbar-toggler ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#menu">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	</div>
+</nav>
+
+<div class="offcanvas offcanvas-start" id="menu">
+	<div class="offcanvas-header">
+		<a href="/" class="offcanvas-title text-decoration-none text-danger">
+			<h2>{{ .Site.Title }}</h2>
+		</a>
+		<button class="btn-close text-reset" type="button" data-bs-dismiss="offcanvas"></button>
+	</div>
+	<div class="offcanvas-body">
+		<p>
+			informational and educational resource about Programming and CS, Information Security and Neurobiology. 
+		</p>
+		<hr>
+		<ul class="nav flex-column">
+			<h3>Navigation:</h3>
+			{{ range .Site.Menus.main }}
+			<li class="nav-item mb-2">
+				<a class="btn btn-outline-success w-100 text-start" href="{{ .URL }}">
+					{{ .Name }}
+				</a>
+			</li>
+			{{ end }}
+		</ul>
+		<hr>
+		<ul class="nav flex-column">
+			<h3>Categories:</h3>
+			{{ range $name, $taxonomy := .Site.Taxonomies }}
+			{{ if eq $name "categories" }}
+			{{ range $key, $value := $taxonomy }}
+			<li class="nav-item mb-2">
+				<a class="btn btn-outline-primary w-100 text-start" href="{{ $.Site.BaseURL }}/{{ $name }}/{{ $key }}/">
+					{{ $key }}
+				</a>
+			</li>
+			{{ end }}
+			{{ end }}
+			{{ end }}
+		</ul>
+  	</div>
+	{{ partial "footer" .}}
+</div>

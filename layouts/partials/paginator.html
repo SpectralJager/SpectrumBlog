@@ -1,0 +1,13 @@
+<div class="my-5 d-flex justify-content-center">
+	<div class="btn-group">
+		<a href="{{ .First.URL }}" class="btn btn-primary">First</a>
+		{{ if .HasPrev }}
+		<a href="{{ .Prev.URL }}" class="btn btn-danger">Prev</a>
+		{{ end }}
+		<span class="btn btn-primary fw-bold disabled" >{{ .PageNumber }}/{{ .TotalPages }}</span>
+		{{ if .HasNext }}
+		<a href="{{ .Next.URL }}" class="btn btn-danger">Next</a>
+		{{ end }}
+		<a href="{{ .Last.URL }}" class="btn btn-primary">Last</a>
+	</div>
+</div>

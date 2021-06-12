@@ -1,0 +1,14 @@
+.card {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 0.9;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.card:hover {
+  -webkit-transform: translateY(-3%);
+          transform: translateY(-3%);
+  opacity: 1;
+}
+/*# sourceMappingURL=main.css.map */
