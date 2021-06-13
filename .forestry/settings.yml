@@ -5,15 +5,26 @@ admin_path: ''
 webhook_url: 
 sections:
 - type: directory
-  path: content/about
-  label: About
+  path: content/posts/neurobiology
+  label: neurobiology
   create: all
-  match: "**/*"
+  match: "*"
+  exclude: ".md"
+  new_doc_ext: ".md"
 - type: directory
-  path: content/posts
-  label: Posts
+  path: content/posts/infosec
+  label: infosec
   create: all
-  match: "**/*"
+  match: "*"
+  exclude: ".md"
+  new_doc_ext: ".md"
+- type: directory
+  path: content/posts/programming
+  label: programming
+  create: all
+  match: "*"
+  exclude: ".md"
+  new_doc_ext: ".md"
 - type: directory
   path: content
   label: Pages
