@@ -23,3 +23,12 @@ fields:
 - type: text
   name: img
   label: img
+- name: content
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Content
