@@ -1,6 +1,6 @@
 {{ define "main" }}
 <div class="container py-5 mt-5">
-	<h1>- {{ .Title }}</h1>
+	<h1>List of: #{{ .Title }}</h1>
 	{{ $paginator := .Paginate (where .Pages "Type" "posts") }}
 	{{ partial "paginator" $paginator }}	
 	<div class="row gy-2 gx-0">
@@ -15,9 +15,9 @@
 						<h3 class="card-title">{{ $page.Title }}</h3>
 						<p class="card-text">{{ $page.PublishDate.Format "2006, January 2"}}</p>
 						<div class="container d-flex gx-2 my-3">
-						{{ range $page.Params.Categories }}
+							{{ range $page.Params.categories }}
 							<a class="card-text btn btn-outline-light" type="button" href="/categories/{{ . }}/">{{ . }}</a>
-						{{ end }}
+							{{ end }}
 						</div>
 						<p class="card-text">{{ truncate 200 $page.Params.Summary }}</p>
 						<a href="{{ $page.Permalink }}" class="btn btn-danger" type="button">Read more</a>
