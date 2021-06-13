@@ -34,4 +34,5 @@ fields:
   name: img
   label: img
 pages:
+- content/posts/infosec/test.md
 - content/posts/programming/test.md
