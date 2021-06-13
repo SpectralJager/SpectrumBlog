@@ -36,7 +36,7 @@
 			{{ if eq $name "categories" }}
 			{{ range $key, $value := $taxonomy }}
 			<li class="nav-item mb-2">
-				<a class="btn btn-outline-primary w-100 text-start" href="{{ $.Site.BaseURL }}/{{ $name }}/{{ $key }}/">
+				<a class="btn btn-outline-primary w-100 text-start" href="{{ $.Site.BaseURL }}{{ $name }}/{{ $key }}/">
 					{{ $key }}
 				</a>
 			</li>
