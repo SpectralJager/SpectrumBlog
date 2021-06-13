@@ -4,4 +4,5 @@ date: {{ .Date }}
 categories: []
 summary: ""
 author: {{ .Site.Params.author }}
+img: 
 ---

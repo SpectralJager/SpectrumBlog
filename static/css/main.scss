@@ -6,4 +6,12 @@
 		transform: translateY(-3%);
 		opacity: 1;
 	}
+	@media screen and (max-width: 768px) {
+		opacity: 1;	
+	}
+}
+.article-text{
+	img{
+		max-width: 100%;
+	}
 }

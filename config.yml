@@ -1,6 +1,8 @@
 baseURL: "http://example.org/"
 languageCode: "en-us"
 title: "SpectrumBlog"
+googleAnalytics: ""
+enableRobotsTXT: true
 
 params:
   author: Spectral Jager
