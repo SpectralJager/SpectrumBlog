@@ -1,12 +1,12 @@
 baseURL: "http://example.org/"
 languageCode: "en-us"
 title: "SpectrumBlog"
-googleAnalytics: ""
 enableRobotsTXT: true
 
 params:
   author: Spectral Jager
   description: informational and educational resource about Programming and CS, Information Security and Neurobiology. 
+  googleAnalyticsID: "G-29XLMER5DY"
   links:
     - name: Twitter
       link: https://twitter.com/SpectrumUnkn
