@@ -8,9 +8,18 @@ fields:
 - type: datetime
   name: date
   label: date
+  default: now
 - type: list
   name: categories
   label: categories
+  config:
+    use_select: true
+    source:
+      type: simple
+    options:
+    - programming
+    - infosec
+    - neurobiology
 - type: list
   name: tags
   label: tags
@@ -20,6 +29,7 @@ fields:
 - type: text
   name: author
   label: author
+  default: Spectral Jager
 - type: text
   name: img
   label: img
