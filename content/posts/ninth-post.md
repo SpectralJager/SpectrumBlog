@@ -1,12 +1,14 @@
 ---
-title: "Ninth Post"
-date: 2021-06-13T13:17:35+07:00
-categories: [third]
-summary: "Its my third test post about something fancy staf that i would describe right now for you. But unfortunatily i cant do that now, LOL."
+title: Ninth Post
+date: 2021-06-13T13:17:35.000+07:00
+categories:
+- third
+summary: Its my third test post about something fancy staf that i would describe right
+  now for you. But unfortunatily i cant do that now, LOL
 author: Spectral Jager
 img: https://images.unsplash.com/photo-1560253023-3ec5d502959f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80
----
 
+---
 Pariatur aliqua aliquip amet magna sint proident exercitation voluptate. Nulla occaecat ipsum laboris qui sunt aliqua eiusmod. Commodo veniam id eu commodo cupidatat pariatur enim.
 
 **Aliquip elit proident quis nostrud veniam laboris ipsum velit et. Non exercitation est dolor duis. Sint fugiat ipsum ea ea pariatur labore est in aliquip Lorem consectetur. Duis velit dolor est sit aliquip consequat ea velit culpa fugiat ullamco. Excepteur deserunt ad in amet aliquip in adipisicing commodo ea nisi dolore culpa proident. Proident excepteur fugiat mollit tempor.**
