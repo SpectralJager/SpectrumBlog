@@ -28,7 +28,7 @@
 							<h3 class="card-title">{{ $page.Title }}</h3>
 							<p class="card-text">{{ $page.PublishDate.Format "2006, January 2"}}</p>
 							<div class="container d-flex gx-2 my-3">
-							{{ range $page.Params.Categories }}
+							{{ range $page.Params.categories }}
 								<a class="card-text btn btn-outline-light" type="button" href="/categories/{{ . }}/">{{ . }}</a>
 							{{ end }}
 							</div>
@@ -45,11 +45,11 @@
 					<div class="card-body">
 						<h3 class="card-title">{{ $page.Title }}</h3>
 						<div class="container d-flex gx-2 my-3">
-						{{ range $page.Params.Categories }}
+						{{ range $page.Params.categories }}
 							<a class="card-text btn btn-outline-light" type="button" href="/categories/{{ . }}/">{{ . }}</a>
 						{{ end }}
 						</div>
-						<p class="card-text">{{ truncate 75 $page.Params.Summary }}</p>
+						<p class="card-text">{{ truncate 75 $page.Params.summary }}</p>
 						<a href="{{ $page.Permalink }}" class="btn btn-danger" type="button">Read more</a>
 					</div>
 				</div>
