@@ -6,23 +6,25 @@
 	<meta name="keywords" content="blog,information,security,infosec,hacking,penetration,testing,programming,golang,go,python,back,end,web,developing,neurobiology,brain,neuron" />
 	<meta property="og:site_name" content="{{ $.Site.Title }}" />
 	<meta property="og:title" content="{{ $.Site.Title }}" />
-	<meta name="twitter:site" content="https://twitter.com/SpectrumUnkn" />
-	<meta name="twitter:creator" content="{{ $.Site.Params.author }}" />
+	<meta name="twitter:site" content="{{ $.Site.BaseURL }}" />
+	<meta name="twitter:creator" content="@{{ (index .Site.Params.links 0).username }}" />
 	<meta name="robots" content="index, follow" />
 	{{ if .IsPage }}
 		<title>{{ $.Site.Title }} | {{.Title }} </title>
 		<meta property="og:type" content="article" />
 		<meta property="og:title" content="{{ .Title }}" />
 		<meta property="og:description" content="{{ .Summary }}" />
+		<meta property="og:url" content="{{ .Permalink }}" />
+		<meta property="og:image" content="{{ .Params.img }}" />
 		<meta name="description" content="{{ .Summary }}" />
 		<meta property="twitter:title" content="{{ .Title }}" />
 		<meta property="twitter:description" content="{{ .Summary }}" />
-		<meta property="article:author" content="{{ $.Site.Params.author }}" />
-		<meta property="article:published_time" content="{{ .Date }}" />
+		<meta property="article:author" content="@{{ (index .Site.Params.links 0).username }}" />
+		<meta property="article:published_time" content="{{ .PublishDate }}" />
 	{{ else }}
 		<title>{{ $.Site.Title }}: Information Security, Programming, Neurobiology and mach more...</title>
 		<meta name="twitter:card" content="summary" />
-		<meta property="og:title" content="{{ $.Site.Title }}" />
+		<meta property="og:title" content="{{ $.Site.Title }}: Information Security, Programming, Neurobiology and mach more..." />
 		<meta property="og:description" content="{{ $.Site.Params.description }}" />
 		<meta name="description" content="{{ $.Site.Params.description }}" />
 	{{ end }}

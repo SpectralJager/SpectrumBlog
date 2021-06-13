@@ -10,12 +10,15 @@ params:
   links:
     - name: Twitter
       link: https://twitter.com/SpectrumUnkn
+      username: SpectrumUnkn
       icon: <i class="bi bi-twitter"></i>
     - name: GitHub
       link: https://github.com/SpectralJager
+      username: SpectralJager
       icon: <i class="bi bi-github"></i>
     - name: LinkedIn
       link: https://www.linkedin.com/in/spectraljager
+      username: spectraljager
       icon: <i class="bi bi-linkedin"></i>
 
 paginate: 4
@@ -29,4 +32,4 @@ menu:
     
 taxonomies:
   category: categories
-  #tag: tags
+  tag: tags

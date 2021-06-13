@@ -44,6 +44,7 @@
 					<img src="{{ $page.Params.img }}"class="card-img" loading="lazy">
 					<div class="card-body">
 						<h3 class="card-title">{{ $page.Title }}</h3>
+						<p class="card-text">{{ $page.PublishDate.Format "2006, January 2"}}</p>
 						<div class="container d-flex gx-2 my-3">
 						{{ range $page.Params.categories }}
 							<a class="card-text btn btn-outline-light" type="button" href="/categories/{{ . }}/">{{ . }}</a>
