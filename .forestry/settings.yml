@@ -10,21 +10,21 @@ sections:
   create: all
   match: "*"
   exclude: ".md"
-  new_doc_ext: ".md"
+  new_doc_ext: md
 - type: directory
   path: content/posts/infosec
   label: infosec
   create: all
   match: "*"
   exclude: ".md"
-  new_doc_ext: ".md"
+  new_doc_ext: md
 - type: directory
   path: content/posts/programming
   label: programming
   create: all
   match: "*"
   exclude: ".md"
-  new_doc_ext: ".md"
+  new_doc_ext: md
 - type: directory
   path: content
   label: Pages
