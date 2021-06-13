@@ -1,4 +1,4 @@
-baseURL: "http://example.org/"
+baseURL: "https://spectrumblog.netlify.app/"
 languageCode: "en-us"
 title: "SpectrumBlog"
 enableRobotsTXT: true
