@@ -53,8 +53,6 @@ func main() {
 
 - *Peoples* - when you introduce new functionality or bugs fix, it could be difficult to determine the how make things right. 
 
-### Difference between Concurrency and Parallelism
-
 
 ## Additional Resources
 
@@ -62,3 +60,4 @@ func main() {
 2. [A Tour of Go: Concurrency](https://tour.golang.org/concurrency/1)
 3. [Concurrency With Golang Goroutines](https://tutorialedge.net/golang/concurrency-with-golang-goroutines/)
 4. [Concurrency in Go](https://www.youtube.com/watch?v=LvgVSSpwND8)
+5. [Concurrency in Go: Tools and Techniques for Developers](https://www.amazon.com/Concurrency-Go-Tools-Techniques-Developers/dp/1491941197)
