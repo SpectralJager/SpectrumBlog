@@ -33,3 +33,5 @@ fields:
 - type: text
   name: img
   label: img
+pages:
+- content/posts/programming/introduction-in-golang-concurrency.md
