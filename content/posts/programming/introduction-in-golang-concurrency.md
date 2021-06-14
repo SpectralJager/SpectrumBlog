@@ -6,145 +6,55 @@ draft = true
 img = "https://www.freecodecamp.org/news/content/images/size/w2000/2020/02/golang-gopher-2.jpg"
 summary = ""
 tags = ["Concurrency", "Golang"]
-title = "Introduction in Golang concurrency."
+title = "Introduction in Golang concurrency. Description and common issues."
 
 +++
-**Hi there, stranger, welcome to the SpectrumBlog. Today I will briefly talk about Golang concurrency and waiting group.**
+**Hi there, stranger, welcome to the SpectrumBlog. Today We will talk about Golang concurrency.**
 
 ## What is Concurrency?
 
-![...](https://i.giphy.com/media/7NOwsFG42paAb9yICU/giphy.webp)
+In IT and Computer Science word **concurrency** can means different things to different peoples. You also may have heard the words as 'asynchronous', 'parallel' or 'threaded'. For some peoples those words means the same thing, but its not right.
 
-How usually execute a synchronous program? Lets imagine you are cooking, you start by looking at recipe, then do first thing, then second and ets. You can't start doing others steps while you haven't end your previous step. You can't to begin cut vegetables while you don't yet took the meat out of the oven.
+> _Concurrency_ - In computer science is the ability of different parts or units of a program, algorithm, or problem to be executed out-of-order or at the same time simultaneously partial order, without affecting the final outcome ([Wiki](https://en.wikipedia.org/wiki/Concurrency_(computer_science)))
 
-Isn't it ridiculous? Why you must stay and wait while meet be ready, while some part of your program is executing and don't start other part that don't depends from it?
+![...](https://static.packt-cdn.com/products/9781789343052/graphics/ad090261-5969-4caa-b7ca-393d30c54548.png)
 
-Here is coming concurrency.
+### Common issues
 
-> In computer science, **concurrency** is the ability of different parts or units of a program, algorithm, or problem to be executed out-of-order or in partial order, without affecting the final outcome. ([Wikipedia](https://en.wikipedia.org/wiki/Concurrency_(computer_science)))
+Concurrency code is by standard difficult to get right. Usually it takes a some time to get it working as it should be, and even then it's not uncommon for bugs to exists in code for years before they will have reviled.
 
-You just put your meat in the oven and start doing another things, when meat is ready you back to it and use with other components. Same with the program, you divide your code on subprograms, run them at the same time, wait while they done and maybe use result of their work.
+Here some of them:
 
-### Difference between Concurrency and Parallelism
+- *Race conditions* - when two or more operations must execute in the correct order, but that order not written or guarantied in the program.
+![...](https://www.rapitasystems.com/files/multithreaded_testing.jpg)
 
-**Concurrency not equal Parallelism!**
-
-> * **Concurrency** is when two or more tasks can start, run, and complete in overlapping time periods. It doesn't necessarily mean they'll ever both be running at the same instant. For example, multitasking on a single-core machine.
-> * **Parallelism** is when tasks literally run at the same time, e.g., on a multi-core processor.
->   from [Stack Overflow](https://stackoverflow.com/questions/1050222/what-is-the-difference-between-concurrency-and-parallelism)
-
-![...](https://sergeyzhuk.me/assets/images/posts/asyncphp-myths/concurrent-vs-parallel.png)
-![...](https://miro.medium.com/max/659/1*bvgViDDOKC3HikokiROgYQ.png)
-
-## Concurrency in Go. Introduction in Goroutines.
-
-![...](https://miro.medium.com/max/800/1*qBiZD7mvwkNcIGDrkyZeCQ.jpeg)
-
-Instead of threads, Golang uses goroutines. They are divided onto small numbers of OS threads, those exist only in the virtual space of go runtime.
-
-Go has a segmented stack that grows when needed. That means it is controlled by Go runtime, not OS.
-
-For using goroutines you just need place keywork 'go' before a **function**, that you want to start in different routine:
-
-```golang
-package main
-
-import (
-	"fmt"
-    "time"
-)
-
-func main(){
-	greatingMsg := "Hi there"
-    go func() {
-    	fmt.Println(greatingMsg, " First")
-    }
-    fmt.Println(greatingMsg, " Second")
-    time.Sleep(1 * time.Second) // wait 1s that give routine print msg 
+Ex:
+```
+var someValue int
+go func(){
+	someValue += 10
+} ()
+if someValue == 10{ // can't predict, will execute that block or not
+	fmt.Println("Value = 10")
 }
 ```
 
-Output:
+- *Deadlock* - one in which all concurrent processes are waiting on one another.
 
-        Hi there!  Second
-        Hi there!  First
+![...](https://miro.medium.com/max/1200/1*yvJjqOwI4epwA1RrlpP_6Q.png)
+Ex:
+```
+func main() {
+    ch := make(chan int)
+    ch <- 1 // stop execution and waiting reading from chanel
+    fmt.Println(<-ch) // will not be executed
+}
+```
 
-**Remember: Main func will not wait while your goroutines will have done.**
+- *Peoples* - when you introduce new functionality or bugs fix, it could be difficult to determine the how make things right. 
 
-E.x.:
+### Difference between Concurrency and Parallelism
 
-1. We comment Sleep function, as result executed only second greeting
-
-    package main
-    
-    import (
-    	"fmt"
-    )
-    
-    func main(){
-    	greetingMsg := "Hi there"
-        go func() {
-        	fmt.Println(greetingMsg, " First")
-        }
-        fmt.Println(greetingMsg, " Second")
-        //time.Sleep(1 * time.Second)
-    }
-
-Output:
-
-    	Hi there!  Second
-
-1. All in different goroutines
-
-    package main
-    
-    import (
-    	"fmt"
-    )
-    
-    func main(){
-    	greetingMsg := "Hi there"
-        go func() {
-        	fmt.Println(greetingMsg, " First")
-        }
-        go fmt.Println(greetingMsg, " Second")
-    }
-
-Output:
-
-    	
-
-### WaitGroup.
-
-You can wait of execution of your goroutines with `time.Sleep`, but you can't always to know how long your function will execute. On the help going `sync.WaitGroup`. That function allow us add out routine in group and wait while all added routines done their jobs.
-
-    package main
-    
-    import (
-    	"fmt"
-    	"sync"
-    )
-    
-    func main() {
-    	greatingMsg := "Hi there!"
-    	var group sync.WaitGroup
-    	group.Add(1)
-    	go func() {
-    		fmt.Println(greatingMsg, " First")
-    		group.Done()
-    	}()
-    	group.Add(1)
-    	go func() {
-    		fmt.Println(greatingMsg, " Second")
-    		group.Done()
-    	}()
-    	group.Wait()
-    }
-
-Output:
-
-        Hi there!  Second
-        Hi there!  First
 
 ## Additional Resources
 
