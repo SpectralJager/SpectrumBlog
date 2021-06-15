@@ -304,7 +304,7 @@ While the minimum stack size is defined as 2048 bytes, the Go runtime does also 
 
 If this limit is reached a call to runtime.abort will take place.
 
-## sources and usefull links
+## sources and useful links
 
  1. [Concurrency — An Introduction to Programming in Go](https://www.golang-book.com/books/intro/10)
  2. [Concurrency in GO and Golang Concurrency Tutorial with Examples  - golangprograms.com](https://www.golangprograms.com/go-language/concurrency.html)
