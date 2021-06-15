@@ -3,7 +3,7 @@ author = "Spectral Jager"
 categories = ["programming"]
 date = 2021-06-14T05:55:03Z
 img = "https://miro.medium.com/max/1106/1*z93yvlIYe2kMObUaPxYTCg.png"
-summary = ""
+summary = "Goroutine is one of the best part of golang and i want introduce it for you and mayby show something new"
 tags = ["Concurrency", "Golang"]
 title = "Introduction in Golang concurrency."
 
