@@ -43,7 +43,7 @@ The main difference between those two definitions is:
 Several problems may arise in concurrency like:
 
 * Shared resource can be accessed by several threads concurrently. So the sequence of access to that resource is important. When a thread tries to read a shared variable, another thread may change the value of the shared variable. That may cause inconsistency.
-* Concurrency code is by standard difficult to get right. Usually it takes a some time to get it working as it should be, and even then it's not uncommon for bugs to exists in code for years before they will have reviled.
+* Concurrency code is usually difficult to get right. Usually it takes a some time to get it working as it should be, and even then it's not uncommon for bugs to exists in code for years before they will have reviled.
 * Race conditions - when two or more operations must execute in the correct order, but that order not written or guarantied in the program.
 * Deadlock - one in which all concurrent processes are waiting on one another.
 
@@ -246,53 +246,32 @@ The WaitGroup type of sync package, is used to wait for the program to finish al
 
 **The Wait method is called inside the main function, which blocks execution until the WaitGroup counter reaches the value of zero and ensures that all goroutines are executed.**
 
+```
 package main
 
 import (
-"fmt"
-"io/ioutil"
-"log"
-"net/http"
-"sync"
+	"fmt"
+	"sync"
 )
 
-// WaitGroup is used to wait for the program to finish goroutines.
-var wg sync.WaitGroup
-
-func responseSize(url string) {
-// Schedule the call to WaitGroup's Done to tell goroutine is completed.
-defer wg.Done()
-
-    fmt.Println("Step1: ", url)
-    response, err := http.Get(url)
-    if err != nil {
-    	log.Fatal(err)
-    }
-    
-    fmt.Println("Step2: ", url)
-    defer response.Body.Close()
-    
-    fmt.Println("Step3: ", url)
-    body, err := ioutil.ReadAll(response.Body)
-    if err != nil {
-    	log.Fatal(err)
-    }
-    fmt.Println("Step4: ", len(body))
-
-}
-
 func main() {
-// Add a count of three, one for each goroutine.
-wg.Add(3)
-fmt.Println("Start Goroutines")
+	var wg sync.WaitGroup
 
-    go responseSize("https://www.golangprograms.com")
-    go responseSize("https://stackoverflow.com")
-    go responseSize("https://coderwall.com")
-    
-    // Wait for the goroutines to finish.
-    wg.Wait()
-    fmt.Println("Terminating Program")
+	wg.Add(1)
+	go func() {
+		fmt.Println(1)
+		wg.Done()
+	}()
+
+	wg.Add(1)
+	go func() {
+		fmt.Println(2)
+		wg.Done()
+	}()
+
+	wg.Wait() // wait untill all routins done
+}
+```
 
 ### Size of Goroutines
 
@@ -334,4 +313,4 @@ If this limit is reached a call to runtime.abort will take place.
  9. 
 10. 
 11. 
-12. 
+12.
