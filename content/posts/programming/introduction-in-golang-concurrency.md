@@ -14,7 +14,6 @@ title = "Introduction in Golang concurrency."
 ## What is Concurrency?
 
 ### Introduction
-
 In IT and Computer Science word **concurrency** can means different things to different peoples. You also may have heard the words as 'asynchronous', 'parallel' or 'threaded'. For some peoples those words means the same thing, but its not right.
 
 > _Concurrency_ - In computer science is the ability of different parts or units of a program, algorithm, or problem to be executed out-of-order or at the same time simultaneously partial order, without affecting the final outcome ([Wiki](https://en.wikipedia.org/wiki/Concurrency_(computer_science)))
@@ -274,7 +273,6 @@ func main() {
 ```
 
 ### Size of Goroutines
-
 [Source](https://tpaschalis.github.io/goroutines-size/)
 Anyone learning Go has heard that “goroutines are like lightweight threads” and that “it’s okay to launch hundreds, thousands of goroutines”. Some people learn that “a goroutine takes up around 2 kilobytes”, most likely referencing the Go 1.4 release notes, and even fewer learn that this represents its initial stack size.
 
