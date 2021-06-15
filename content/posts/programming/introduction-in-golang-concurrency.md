@@ -65,6 +65,7 @@ Although Go’s approach to concurrency originates in Hoare’s Communicating Se
 ### Goroutines
 
 ![...](https://miro.medium.com/max/5216/1*dD8qcmhpjUlKxZ1GHmX1AQ.png)
+
 Golang provides Goroutines as a way to handle operations concurrently.
 
 GO routine can be understood as a light weight thread. The cost for creating and running GO routine is 2 KB stack size, so there can be thousands of GO routines running simultaneously in a GO application.
@@ -103,6 +104,7 @@ This program consists of two goroutines. The first goroutine is implicit and is 
 ### Chanels
 
 ![...](https://i.stack.imgur.com/kSx6w.png)
+
 The most natural way to fetch a value from a goroutine is channels.Go channels are like pipes, that connect concurrent goroutines. You can send values into channels from one goroutine and receive those values into another goroutine or in a synchronous function.
 
 Channels can be thought as a medium using which GO routines can communicate. Data can be sent or received by using channels. Receiving or sending of data in channel is blocking by nature. Each channel has type defined to it. Data type other than the defined ones cannot be written or read.
