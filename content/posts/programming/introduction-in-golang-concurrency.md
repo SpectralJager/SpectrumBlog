@@ -279,6 +279,7 @@ The WaitGroup type of sync package, is used to wait for the program to finish al
 ### Size of Goroutines
 
 [Source](https://tpaschalis.github.io/goroutines-size/)
+
 Anyone learning Go has heard that “goroutines are like lightweight threads” and that “it’s okay to launch hundreds, thousands of goroutines”. Some people learn that “a goroutine takes up around 2 kilobytes”, most likely referencing the Go 1.4 release notes, and even fewer learn that this represents its initial stack size.
 
 The Goroutine scheduler is a work-stealing scheduler introduced back in Go 1.1 by Dmitry Vyukov and the Go team. Its design document is available here and discusses possible future improvements. There are lots of great resources to grok how it works in depth, but the main thing to understand is that it tries to manage G’s, M’s and P’s ; goroutines, machine threads and processors.
