@@ -300,15 +300,14 @@ If this limit is reached a call to runtime.abort will take place.
 
 ## sources and usefull links
 
- 1. 
- 2. 
- 3. 
- 4. 
- 5. 
- 6. 
- 7. 
- 8. 
- 9. 
-10. 
-11. 
-12.
+1. [Concurrency — An Introduction to Programming in Go](https://www.golang-book.com/books/intro/10)
+2. [Concurrency in GO and Golang Concurrency Tutorial with Examples  - golangprograms.com](https://www.golangprograms.com/go-language/concurrency.html)
+3. [Concurrency and Channels in Go](https://medium.com/trendyol-tech/concurrency-and-channels-in-go-bbc4dea75286)
+4. [Chapter 8 Concurrency](http://www.golangbootcamp.com/book/concurrency)
+5. [Goroutines – Concurrency in Golang](https://www.geeksforgeeks.org/goroutines-concurrency-in-golang/)
+6. [Understanding GO Routine and Channel](https://medium.com/wesionary-team/understanding-go-routine-and-channel-b09d7d60e575)
+7. [Goroutines](https://golangbot.com/goroutines/)
+8. [Goroutines and Waitgroup  - golangprograms.com](https://www.golangprograms.com/goroutines.html)
+9. [What is a goroutine? And what is their size?](https://tpaschalis.github.io/goroutines-size/)
+10. [Go Concurrency Patterns: Pipelines and cancellation](https://blog.golang.org/pipelines)
+11. [Concurrency vs. Parallelism — A brief view](https://medium.com/@itIsMadhavan/concurrency-vs-parallelism-a-brief-review-b337c8dac350)
