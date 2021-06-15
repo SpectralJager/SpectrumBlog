@@ -164,30 +164,30 @@ The loop for i := range ch receives values from the channel repeatedly until it 
 Note: Only the sender should close a channel, never the receiver. Sending on a closed channel will cause a panic.
 
 Another note: Channels aren’t like files; you don’t usually need to close them. Closing is only necessary when the receiver must be told there are no more values coming, such as to terminate a range loop.
-
+```
 package main
 
 import (
-"fmt"
+	"fmt"
 )
 
 func fibonacci(n int, c chan int) {
-x, y := 0, 1
-for i := 0; i < n; i++ {
-c <- x
-x, y = y, x+y
-}
-close(c)
+    x, y := 0, 1
+    for i := 0; i < n; i++ {
+        c <- x
+        x, y = y, x+y
+    }
+	close(c)
 }
 
 func main() {
-c := make(chan int, 10)// buffered chanel
-go fibonacci(cap(c), c)
-for i := range c {
-fmt.Println(i)
+    c := make(chan int, 10)// buffered chanel
+    go fibonacci(cap(c), c)
+    for i := range c {
+		fmt.Println(i)
+	}
 }
-}
-
+```
 ### Select
 
 The select statement lets a goroutine wait on multiple communication operations.
