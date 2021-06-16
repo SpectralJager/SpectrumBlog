@@ -2,7 +2,7 @@
 author = "Spectral Jager"
 categories = ["programming"]
 date = 2021-06-16T07:50:40Z
-img = "https://images.unsplash.com/photo-1565273601018-d1da7cfed4f7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1"
+img = "https://images.unsplash.com/photo-1571786256017-aee7a0c009b6"
 summary = "In that article i will show you how to create a simple http web server, handle requests, make response."
 tags = ["Webserver", "Backend", "Golang"]
 title = "Golang Backend development: Creating Web server"
