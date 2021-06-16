@@ -35,3 +35,4 @@ fields:
   label: img
 pages:
 - content/posts/programming/introduction-in-golang-concurrency.md
+- content/posts/programming/overview-of-networked-systems.md
