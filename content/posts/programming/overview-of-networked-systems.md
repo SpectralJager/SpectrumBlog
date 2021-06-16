@@ -14,9 +14,30 @@ title = "Overview of networked systems"
 - Not always those connections reliable or secure.
 - The way of connection of nodes in a network called topology. From simple single connection btw two nodes to complex layouts of nodes.
 - base types of topology
-	- point ot point
-    - daisy chain
-    - bus
-    - ring
-    - star
-    - mesh
+	- point ot point, uncommon, direct communication btw two nodes
+    - daisy chain, series of point-to-point, intermediat nodes calls *hops*, uncommon
+    - bus, nodes share common network link, uncommon, all nodes get same trafic
+    - ring, closed loop, trafic transfer in single direction, if one node on the way will fail transfer data, it will never reach its destination
+    - star, individual point-to-point connection with nodes and center node 
+    - mesh, every nodes conected to each other
+- Bandwidth is the amount of data we can send over a network connection in an interval of time
+- Internet service provider (ISP)
+- Latency is a measure of the time that passes between sending a network resource request and receiving a response
+- Content delivery network (CDN)
+- Open system interconnection (OSI)
+- Protocols are rules and procured that determine the format and order of data sent over a network
+- Transmission control protocol (TPC)
+- OSI layers
+	7. Applicaton layer
+    6. Presentation layer, preper data for network layer and present data for application layer
+    5. Session layer, manage the connection life cycle btw nodes on a network
+    4. Transport layer, controls and coordinates the transfer of data btw two nodes thile maintaining the reliability of the transfer
+    3. Network layer, responsible for transmiting data btw nodes
+    2. Data link layer, habdles data transfers btw two directly connected nodes
+    1. Physical layer, converst bits from the network stack to electrical/optic/radio signals suitable for the underlying physical medium and from the physical medium back into bits
+- transmission rate is mesering in bits per second
+- bytes per second use when describes amount of transfered data
+- Encapsulation is a method of hiding implementation details or making onlyrelevant details available to the recipient
+- payload/message body/service data unit is data that traveling down the stack
+- When the payload moves up the stack, each layer strips the header information from the previous stack
+- horizontal communication is communicaton btw server and client on the same layer
