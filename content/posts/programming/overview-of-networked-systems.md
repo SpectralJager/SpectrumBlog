@@ -26,7 +26,7 @@ title = "Overview of networked systems"
 - Content delivery network (CDN)
 - Open system interconnection (OSI)
 - Protocols are rules and procured that determine the format and order of data sent over a network
-- Transmission control protocol (TPC)
+- Transmission control protocol (TCP)
 - OSI layers
 	7. Applicaton layer
     6. Presentation layer, preper data for network layer and present data for application layer
@@ -41,3 +41,15 @@ title = "Overview of networked systems"
 - payload/message body/service data unit is data that traveling down the stack
 - When the payload moves up the stack, each layer strips the header information from the previous stack
 - horizontal communication is communicaton btw server and client on the same layer
+- TCP is a layer 4 protocol, whose payloads are also knows as segments or datagrams
+- Internet Protocol (IP) at layer 3, payload is known as a packet
+- Layer 2 payload known as frame
+- Media acccess control (MAC) is a unique name for node's network interface
+- Frame check sequence (FCS) is a checksum to facilitate error detection
+- TCP/IP using end-to-end principle
+- TCP layers
+	1. Application layer { Application, Presentation, Session }
+    2. Transport layer
+    3. Internet/Network layer
+    4. Link layer { Data, Physical }
+-     
