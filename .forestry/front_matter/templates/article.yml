@@ -34,4 +34,5 @@ fields:
   name: img
   label: img
 pages:
+- content/posts/programming/golang-backend-development-creating-web-server-and-postgresql-connection-part-1.md
 - content/posts/programming/introduction-in-golang-concurrency.md
