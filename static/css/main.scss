@@ -10,8 +10,25 @@
 		opacity: 1;	
 	}
 }
-.article-text{
-	img{
-		max-width: 100%;
+.article-body{
+	background-color: rgba($color: #e2e2e2, $alpha: .9525);
+
+	.article-text{
+		img{
+			display: block;
+			max-width: 100%;
+			margin: 5vh 0;
+		}
+		h1, h2, h3, h4, h5, h6{
+			margin: 3vh 0;
+		}
+		pre{
+			padding: 4vh;
+			font-family: monospace;
+			color: rgb(50, 185, 8);
+			background-color: black;
+			font-size: 105%;
+			border-radius: 1em;
+		}
 	}
 }

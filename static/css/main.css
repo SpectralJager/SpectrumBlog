@@ -18,7 +18,26 @@
   }
 }
 
-.article-text img {
+.article-body {
+  background-color: rgba(226, 226, 226, 0.9525);
+}
+
+.article-body .article-text img {
+  display: block;
   max-width: 100%;
+  margin: 5vh 0;
+}
+
+.article-body .article-text h1, .article-body .article-text h2, .article-body .article-text h3, .article-body .article-text h4, .article-body .article-text h5, .article-body .article-text h6 {
+  margin: 3vh 0;
+}
+
+.article-body .article-text pre {
+  padding: 4vh;
+  font-family: monospace;
+  color: #32b908;
+  background-color: black;
+  font-size: 105%;
+  border-radius: 1em;
 }
 /*# sourceMappingURL=main.css.map */
