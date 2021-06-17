@@ -29,5 +29,13 @@ The way of connection of nodes in a network called *topology*. Its could be simp
 Base type of topology:
 	1. Point-to-Point. Its type describet by **direct communication between two nodes** with a common link. Transfer data going in multiple ways: Simplex, Half Duplex or Full Duplex.
     ![point-to-point](https://www.myworkingnet.com/wp-content/uploads/2021/02/Point-to-Point-Network-Topology.png)
-    2. Daisy Chain. Its series of point-to-point connections, when data going from sender to receiver through internal nodes. 
+    2. Daisy Chain. Its series of point-to-point connections, when data going from sender to receiver through internal nodes (they called *hops*). 
     ![daisy chain](https://i.pinimg.com/originals/db/cc/d1/dbccd1be7e8731070d2fbf888a8807ae.png)
+    3. Bus. Its when nodes share common network link (known as *backbone*). All nodes get the same trafic and be accessed by any node.
+    ![bus](https://i.pinimg.com/originals/d9/a9/74/d9a97433e7fff183ce32c70f80152720.png)
+    4. Ring. Its closed loop of daisy chain. Transmission mode is simplex. Aggregate network bandwidth is bottlenecked by the weakest link between two nodes.
+    ![ring](https://www.myworkingnet.com/wp-content/uploads/2021/02/Ring-Topology-1024x645.png)
+    5. Star. Individual point-to-point connection with the center node (*hub* or *switch*). The aggregate central bandwidth forms a network bottleneck for large clusters. 
+    ![star](https://www.myworkingnet.com/wp-content/uploads/2020/01/Star-topology.png)
+    6. Mesh. Every node in the network connect to each other.
+    ![mesh](https://www.myworkingnet.com/wp-content/uploads/2021/02/Mesh-Topology-1024x632.png)
