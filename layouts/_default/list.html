@@ -1,31 +1,32 @@
 {{ define "main" }}
+{{ partial "hero.html" . }}	
 <div class="container py-5 mt-5">
 	<h1>List of: #{{ .Title }}</h1>
 	{{ $paginator := .Paginate (where .Pages "Type" "posts") }}
 	{{ partial "paginator" $paginator }}	
 	<div class="row gy-2 gx-0">
-	{{ range $page := $paginator.Pages }}
-		<div class="card bg-dark text-white shadow-lg">
-			<div class="row">
-				<div class="col-xl-5 col-lg-6">
-					<img src="{{ $page.Params.img }}"class="card-img">
+		{{ range $page := $paginator.Pages }}
+		<div class="card bg-dark text-white shadow-lg mb-4 p-0 border-primary">
+			<div class="row g-0">
+				<div class="col-lg-6 col-xl-4">
+					<img src="{{ $page.Params.img }}"class="card-img h-100 w-100" loading="lazy">
 				</div>
-				<div class="col-xl-7 col-lg-6">
+				<div class="col-lg-6 col-xl-8">
 					<div class="card-body">
 						<h3 class="card-title">{{ $page.Title }}</h3>
 						<p class="card-text">{{ $page.PublishDate.Format "2006, January 2"}}</p>
 						<div class="container d-flex gx-2 my-3">
-							{{ range $page.Params.categories }}
+						{{ range $page.Params.categories }}
 							<a class="card-text btn btn-outline-light" type="button" href="/categories/{{ . }}/">{{ . }}</a>
-							{{ end }}
+						{{ end }}
 						</div>
-						<p class="card-text">{{ truncate 200 $page.Params.summary }}</p>
-						<a href="{{ $page.Permalink }}" class="btn btn-danger" type="button">Read more</a>
+						<p class="card-text">{{ $page.Params.summary }}</p>
+						<a href="{{ $page.Permalink }}" class="btn text-danger fw-bold fs-5" type="button">Read more <i class="bi bi-arrow-right"></i></a>
 					</div>
 				</div>
 			</div>
 		</div>
-	{{ end }}
+		{{ end }}
 	</div>
 	{{ partial "paginator" $paginator }}	
 </div>

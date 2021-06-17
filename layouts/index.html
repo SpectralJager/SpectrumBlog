@@ -1,29 +1,16 @@
 {{ define "main" }}
-<section class="bg-dark text-white pt-5 mt-5 bg-img" style="background-image: url('/img/bg-1.svg');">
-	<div class="container">
-		<div class="row d-flex align-items-center justify-content-between">
-			<div class="col-md-6 h-auto rounded p-3" style="background-color: rgba(80, 80, 80, 0.3);">
-				<h1>Spectrum Blog</h3>
-				<p class="description text-warning my-4"> informational and educational resource about Programming and CS, Information Security and Neurobiology. </p>
-			</div>
-			<div class="col-md-6">
-				<img src="/img/home-hero.svg" alt="" class="image-fluid w-100" loading="lazy">
-			</div>
-		</div>
-	</div>
-</section>
+{{ partial "hero.html" . }}	
 <section class="bg-img py-5">
 		<h3 class="text-center fw-bold mb-5">Latest Articles</h3>
 		<div class="container">
-			<div class="row g-1">
+			<div class="row gx-0">
 			{{ range $index, $page := first 5 .Site.RegularPages }}
-			{{ if eq $index 0 }}
-			<div class="card bg-dark text-white shadow-lg">
-				<div class="row">
-					<div class="col-lg-6 col-xl-5">
-						<img src="{{ $page.Params.img }}"class="card-img" loading="lazy">
+			<div class="card bg-dark text-white shadow-lg mb-4 p-0 border-primary">
+				<div class="row g-0">
+					<div class="col-lg-6 col-xl-4">
+						<img src="{{ $page.Params.img }}"class="card-img h-100 w-100" loading="lazy">
 					</div>
-					<div class="col-lg-6 col-xl-7">
+					<div class="col-lg-6 col-xl-8">
 						<div class="card-body">
 							<h3 class="card-title">{{ $page.Title }}</h3>
 							<p class="card-text">{{ $page.PublishDate.Format "2006, January 2"}}</p>
@@ -33,29 +20,11 @@
 							{{ end }}
 							</div>
 							<p class="card-text">{{ $page.Params.summary }}</p>
-							<a href="{{ $page.Permalink }}" class="btn btn-danger" type="button">Read more</a>
+							<a href="{{ $page.Permalink }}" class="btn text-danger fw-bold fs-5" type="button">Read more <i class="bi bi-arrow-right"></i></a>
 						</div>
 					</div>
 				</div>
 			</div>
-			{{ else }}
-			<div class="col-xl-3 col-sm-6">
-				<div class="card bg-dark text-white shadow-sme">
-					<img src="{{ $page.Params.img }}"class="card-img" loading="lazy">
-					<div class="card-body">
-						<h3 class="card-title">{{ $page.Title }}</h3>
-						<p class="card-text">{{ $page.PublishDate.Format "2006, January 2"}}</p>
-						<div class="container d-flex gx-2 my-3">
-						{{ range $page.Params.categories }}
-							<a class="card-text btn btn-outline-light" type="button" href="/categories/{{ . }}/">{{ . }}</a>
-						{{ end }}
-						</div>
-						<p class="card-text">{{ truncate 75 $page.Params.summary }}</p>
-						<a href="{{ $page.Permalink }}" class="btn btn-danger" type="button">Read more</a>
-					</div>
-				</div>
-			</div>
-			{{ end }}
 			{{ end }}
 			</div>
 		</div>
