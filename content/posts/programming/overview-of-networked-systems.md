@@ -2,11 +2,10 @@
 author = "Spectral Jager"
 categories = ["programming"]
 date = 2021-06-16T17:24:45Z
-draft = true
-img = ""
-summary = ""
+img = "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80"
+summary = "In that article we will talk about computer networking, typologies, and basic networking terms. Also briefly described OSI and TCP/IP models, ISP."
 tags = ["IP", "OSI", "TCP", "Networking"]
-title = "Overview of networked systems: 5+1 basic things that allow you understand computer networking."
+title = "Overview of networked systems: 5+1 basic things that allow you to understand computer networking."
 
 +++
 In the digital age most devices (over 10.07 billions on statistics of 2020 year [(statista.com)](https://www.statista.com/statistics/1183457/iot-connected-devices-worldwide/)) communicate with each other over computer networks. It could be computers, smartphones, printers, scanners etc, that are connected through a transmission medium such as wires, cables.
