@@ -84,3 +84,10 @@ TCP/IP contains 4 layers, whose payloads are also known as segments or datagrams
 4\. Application layer -- includes the protocols used by most applications for providing user services or exchanging application data over the network connection established by the lower lever protocols.
 
 # Conclussion 
+In that article we have talked about computer networking, topologies, basic networking terms. Also brifle described OSI and TCP/IP models, ISP.
+
+Its just the tip of the iceberg. For futer and deeper lerning i could recomend:
+
+1. [Computer Networking: A Top-Down Approach](https://www.amazon.co.uk/dp/0133594149)
+2. [Computer Networks](https://www.amazon.co.uk/dp/9332518742)
+3. [Computer Networking Course - Network Engineering](https://www.youtube.com/watch?v=qiQR5rTSshw)
