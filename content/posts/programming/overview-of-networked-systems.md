@@ -9,15 +9,15 @@ tags = ["IP", "OSI", "TCP", "Networking"]
 title = "Overview of networked systems: 5+1 basic things that allow you understand computer networking."
 
 +++
-In the digital age most devices (over 10.07 billions on statistic of 2020 year [(statista.com)](https://www.statista.com/statistics/1183457/iot-connected-devices-worldwide/)) communicate with each other over computer networks. It could be computers, smartphones, printers, scanners etc, that connected through a transmission medium such as wires, cables.
+In the digital age most devices (over 10.07 billions on statistics of 2020 year [(statista.com)](https://www.statista.com/statistics/1183457/iot-connected-devices-worldwide/)) communicate with each other over computer networks. It could be computers, smartphones, printers, scanners etc, that are connected through a transmission medium such as wires, cables.
 
-Computer Network is important part of our live, that allows us order various products from home, self-study, spend funny time and other different things. I also could say it help us survive in modern world.
+Computer Network is an important part of our live, that allows us to order various products from home, self-study, spend fun time and other different things. I also could say it help us survive in the modern world.
 
 ![...](https://images.unsplash.com/photo-1483389127117-b6a2102724ae)
 
 # What is COMPUTER NETWORK?
 
-Here we come to definition of _computer network_ - is a connection between two or more nodes (could be a single computer devices or other networks). Those connections not always are reliable or secure.
+Here we come to the definition of _computer network_ - is a connection between two or more nodes (could be a single computer device or other networks). Those connections not always are reliable or secure.
 
 ## Main terms of computer network.
 
@@ -85,9 +85,9 @@ TCP/IP contains 4 layers, whose payloads are also known as segments or datagrams
 
 # Conclusion
 
-In that article we have talked about computer networking, topologies, basic networking terms. Also brifle described OSI and TCP/IP models, ISP.
+In that article we have talked about computer networking, typologies, basic networking terms. Also brifle described OSI and TCP/IP models, ISP.
 
-Its just the tip of the iceberg. For futer and deeper lerning i could recomend:
+Its just the tip of the iceberg. For future and deeper learning i could recommend:
 
 1. [Computer Networking: A Top-Down Approach](https://www.amazon.co.uk/dp/0133594149)
 2. [Computer Networks](https://www.amazon.co.uk/dp/9332518742)
