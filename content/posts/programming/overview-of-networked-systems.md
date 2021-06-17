@@ -11,6 +11,8 @@ title = "Overview of networked systems: 5+1 basic things that allow you understa
 +++
 In the digital age most devices (over 10.07 billions on statistic of 2020 year [(statista.com)](https://www.statista.com/statistics/1183457/iot-connected-devices-worldwide/)) communicate with each other over computer networks. It could be computers, smartphones, printers, scanners etc, that connected through a transmission medium such as wires, cables. Computer Network is important part of our live, that allows us order various products from home, self-study, spend funny time and other different things. I also could say it help us survive in modern world.
 
+![...](https://images.unsplash.com/photo-1483389127117-b6a2102724ae)
+
 # What is COMPUTER NETWORK?
 
 Here we come to definition of _computer network_ - is a connection between two or more nodes (could be a single computer devices or other networks). Those connections not always are reliable or secure.
