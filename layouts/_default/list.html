@@ -19,7 +19,7 @@
 							<a class="card-text btn btn-outline-light" type="button" href="/categories/{{ . }}/">{{ . }}</a>
 							{{ end }}
 						</div>
-						<p class="card-text">{{ truncate 200 $page.Params.Summary }}</p>
+						<p class="card-text">{{ truncate 200 $page.Params.summary }}</p>
 						<a href="{{ $page.Permalink }}" class="btn btn-danger" type="button">Read more</a>
 					</div>
 				</div>
