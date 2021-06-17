@@ -22,6 +22,7 @@ Here we come to definition of _computer network_ - is a connection between two o
 ## Main terms of computer network.
 
 Three main therms, that helps to describe computer network:
+
 1\. _Bandwidth_ - is the amount of data we can send over a network connection in an interval of time
 2\. _Latency_ - is a measure of the time that passes between sending a network resource request and receiving a response
 3\. Transmission modes:
@@ -55,6 +56,7 @@ Base types of topology:
 An ISP its an organization that provides a services as the access point or the gateway to the internet.
 
 Types of ISP:
+
 1\. Access providers -- provide Internet access.
 2\. Mailbox providers -- provide services for hosting electronic mail domains with access to storage for mail boxes.
 3\. Hosting ISPs -- email, web-hosting or online storage services (other may include virtual server, cloud services or physical server).
@@ -74,6 +76,7 @@ Its just a theoretical model that was developed by researchers. It only exist on
 The Transmission Control Protocol/Internet Protocol (TCP/IP) model is the conceptual model and set of communicaitons protocols used in the Internet and similar computer networks.
 
 TCP/IP cointains 4 layers, whose payloads are also known as segments or datagrams:
+
 1\. Link layer -- operate within the scope of the local network conneciton to which a host is attached. Used to move packets between the Internet layer interfaces of two different hosts on the same link.
 2\. Internet layer -- a group of protocols, methods and specifications that are used to transport network packets from original host to across network, if necessary, to the destination host specified by an IP address.
 3\. Transport layer -- establishes basic data channels that applications use for task-specific data exchange.
