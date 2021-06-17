@@ -55,3 +55,15 @@ Types of ISP:
     7. Wireless ISP -- an Internet service provider with a network based on wireless networking.
     
 # Open System Interconnection (OSI) and Transmission Control Protocol (TCP).
+The OSI is a conceptual framework used to describe the functions of a networking system. Its characterizes computing functions into a universal set of rules and requirements in order to support interoperability between different products and software. The OSI model split into 7 different layers (from down to up): Physical, Data Link, Network, Transport, Session, Presentation and Application. 
+
+Its just a theoretical model that was developed by researchers. It only exist on paper. Meanwhile the internet is base on TCP/IP, which is a "simplified" impolementation or inspired by the OSI model.
+
+![OSI_TCP/IP](https://media.fs.com/images/community/wp-content/uploads/2017/11/comparison-of-OSI-and-TCPIP.jpg)
+
+The Transmission Control Protocol/Internet Protocol (TCP/IP) model is the conceptual model and set of communicaitons protocols used in the Internet and similar computer networks.
+
+TCP/IP cointains 4 layers, whose payloads are also known as segments or datagrams:
+	1. Link layer -- operate within the scope of the local network conneciton to which a host is attached. Used to move packets between the Internet layer interfaces of two different hosts on the same link.
+    2. Internet layer -- a group of protocols, methods and specifications that are used to transport network packets from original host to across network, if necessary, to the destination host specified by an IP address.
+    3. Transport layer
