@@ -23,12 +23,12 @@ Here we come to the definition of _computer network_ - is a connection between t
 
 Three main therms, that helps to describe computer network:
 
-1\. _Bandwidth_ - is the amount of data we can send over a network connection in an interval of time
-2\. _Latency_ - is a measure of the time that passes between sending a network resource request and receiving a response
-3\. Transmission modes:
-\- _Simplex_ -- single flows in **ONE** direction and **ONLY** one node transmit and the other receives.
-\- _Half Duplex_ -- each node can transmits and receive but **NOT** at the same time.
-\- _Full Duplex_ -- both nodes transmit and receive simultaneously.
+1. _Bandwidth_ - is the amount of data we can send over a network connection in an interval of time
+2. _Latency_ - is a measure of the time that passes between sending a network resource request and receiving a response
+3. Transmission modes:
+	- _Simplex_ -- single flows in **ONE** direction and **ONLY** one node transmit and the other receives.
+	- _Half Duplex_ -- each node can transmits and receive but **NOT** at the same time.
+	- _Full Duplex_ -- both nodes transmit and receive simultaneously.
 
 ## Ways of connections.
 
@@ -36,16 +36,16 @@ The way of connection of nodes in a network called _topology_. It could be a sim
 
 Base types of topology:
 
-1\. Point-to-Point. Its type is described by **direct communication between two nodes** with a common link. Transfer data going in multiple ways: Simplex, Half Duplex or Full Duplex.
+1. Point-to-Point. Its type is described by **direct communication between two nodes** with a common link. Transfer data going in multiple ways: Simplex, Half Duplex or Full Duplex.
 ![point-to-point](https://www.myworkingnet.com/wp-content/uploads/2021/02/Point-to-Point-Network-Topology.png)
-2\. Daisy Chain. Its series of point-to-point connections, when data goes from sender to receiver through internal nodes (they are called _hops_).
+2. Daisy Chain. Its series of point-to-point connections, when data goes from sender to receiver through internal nodes (they are called _hops_).
 ![daisy chain](https://i.pinimg.com/originals/db/cc/d1/dbccd1be7e8731070d2fbf888a8807ae.png)
-3\. Bus. It's when nodes share a common network link (known as _backbone_). All nodes get the same traffic and be accessed by any node. ![bus](https://i.pinimg.com/originals/d9/a9/74/d9a97433e7fff183ce32c70f80152720.png)
-4\. Ring. Its closed loop of daisy chain. Transmission mode is simplex. Aggregate network bandwidth is bottlenecked by the weakest link between two nodes.
+3. Bus. It's when nodes share a common network link (known as _backbone_). All nodes get the same traffic and be accessed by any node. ![bus](https://i.pinimg.com/originals/d9/a9/74/d9a97433e7fff183ce32c70f80152720.png)
+4. Ring. Its closed loop of daisy chain. Transmission mode is simplex. Aggregate network bandwidth is bottlenecked by the weakest link between two nodes.
 ![ring](https://www.myworkingnet.com/wp-content/uploads/2021/02/Ring-Topology-1024x645.png)
-5\. Star. Individual point-to-point connection with the center node (_hub_ or _switch_). The aggregate central bandwidth forms a network bottleneck for large clusters.
+5. Star. Individual point-to-point connection with the center node (_hub_ or _switch_). The aggregate central bandwidth forms a network bottleneck for large clusters.
 ![star](https://www.myworkingnet.com/wp-content/uploads/2020/01/Star-topology.png)
-6\. Mesh. Every node in the network connects to each other.
+6. Mesh. Every node in the network connects to each other.
 ![mesh](https://www.myworkingnet.com/wp-content/uploads/2021/02/Mesh-Topology-1024x632.png)
 
 ## Internet service provider (ISP)
@@ -56,19 +56,19 @@ An ISP is an organization that provides a service as the access point or the gat
 
 Types of ISP:
 
-1\. Access providers -- provide Internet access.
-2\. Mailbox providers -- provide services for hosting electronic mail domains with access to storage for mail boxes.
-3\. Hosting ISPs -- email, web-hosting or online storage services (other may include virtual server, cloud services or physical server).
-4\. Transit ISPs -- _Access provider for Access provider_. ISPs themselves pay upstream ISPs for Internet access.
-5\. Virtual ISPs -- an operation that purchases services from another ISP.
-6\. Free ISPs -- a service provider that provides service free of charge.
-7\. Wireless ISP -- an Internet service provider with a network based on wireless networking.
+1. Access providers -- provide Internet access.
+2. Mailbox providers -- provide services for hosting electronic mail domains with access to storage for mail boxes.
+3. Hosting ISPs -- email, web-hosting or online storage services (other may include virtual server, cloud services or physical server).
+4. Transit ISPs -- _Access provider for Access provider_. ISPs themselves pay upstream ISPs for Internet access.
+5. Virtual ISPs -- an operation that purchases services from another ISP.
+6. Free ISPs -- a service provider that provides service free of charge.
+7. Wireless ISP -- an Internet service provider with a network based on wireless networking.
 
 # Open System Interconnection (OSI) and Transmission Control Protocol (TCP).
 
-The OSI is a conceptual framework used to describe the functions of a networking system. Its characterizes computing functions into a universal set of rules and requirements in order to support interoperability between different products and software. The OSI model split into 7 different layers (from down to up): Physical, Data Link, Network, Transport, Session, Presentation and Application.
+The OSI is a conceptual framework used to describe the functions of a networking system. It characterizes computing functions into a universal set of rules and requirements in order to support interoperability between different products and software. The OSI model is split into 7 different layers (from down to up): Physical, Data Link, Network, Transport, Session, Presentation and Application.
 
-Its just a theoretical model that was developed by researchers. It only exist on paper. Meanwhile the internet is base on TCP/IP, which is a "simplified" implementation or inspired by the OSI model.
+It's just a theoretical model that was developed by researchers. It only exists on paper. Meanwhile the internet is based on TCP/IP, which is a "simplified" implementation or inspired by the OSI model.
 
 ![OSI](https://media.fs.com/images/community/wp-content/uploads/2017/11/comparison-of-OSI-and-TCPIP.jpg)
 
@@ -76,18 +76,18 @@ The Transmission Control Protocol/Internet Protocol (TCP/IP) model is the concep
 
 TCP/IP contains 4 layers, whose payloads are also known as segments or datagrams:
 
-1\. Link layer -- operate within the scope of the local network connection to which a host is attached. Used to move packets between the Internet layer interfaces of two different hosts on the same link.
-2\. Internet layer -- a group of protocols, methods and specifications that are used to transport network packets from original host to across network, if necessary, to the destination host specified by an IP address.
-3\. Transport layer -- establishes basic data channels that applications use for task-specific data exchange.
-\- TCP -- a connection-oriented protocol.
-\- User Datagram Protocol (UDP) -- a connectionless protocol.
-4\. Application layer -- includes the protocols used by most applications for providing user services or exchanging application data over the network connection established by the lower lever protocols.
+1. Link layer -- operate within the scope of the local network connection to which a host is attached. Used to move packets between the Internet layer interfaces of two different hosts on the same link.
+2. Internet layer -- a group of protocols, methods and specifications that are used to transport network packets from original host to across network, if necessary, to the destination host specified by an IP address.
+3. Transport layer -- establishes basic data channels that applications use for task-specific data exchange.
+	- TCP -- a connection-oriented protocol.
+	- User Datagram Protocol (UDP) -- a connectionless protocol.
+4. Application layer -- includes the protocols used by most applications for providing user services or exchanging application data over the network connection established by the lower lever protocols.
 
 # Conclusion
 
-In that article we have talked about computer networking, typologies, basic networking terms. Also brifle described OSI and TCP/IP models, ISP.
+In that article we talked about computer networking, typologies, and basic networking terms. Also briefly described OSI and TCP/IP models, ISP.
 
-Its just the tip of the iceberg. For future and deeper learning i could recommend:
+It's just the tip of the iceberg. For future and deeper learning i could recommend:
 
 1. [Computer Networking: A Top-Down Approach](https://www.amazon.co.uk/dp/0133594149)
 2. [Computer Networks](https://www.amazon.co.uk/dp/9332518742)
