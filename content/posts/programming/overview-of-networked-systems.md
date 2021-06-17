@@ -81,4 +81,4 @@ TCP/IP contains 4 layers, whose payloads are also known as segments or datagrams
 3\. Transport layer -- establishes basic data channels that applications use for task-specific data exchange.
 \- TCP -- a connection-oriented protocol.
 \- User Datagram Protocol (UDP) -- a connectionless protocol.
-4\. Application layer -- includes the protocols used by most applications for providing user services or exchanging application data over the network conneciton established by the lower lever protocols.
+4\. Application layer -- includes the protocols used by most applications for providing user services or exchanging application data over the network connection established by the lower lever protocols.
