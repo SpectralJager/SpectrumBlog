@@ -6,7 +6,7 @@ draft = true
 img = ""
 summary = ""
 tags = ["IP", "OSI", "TCP", "Networking"]
-title = "Overview of networked systems: 5+1 basic things that allow you understand networking."
+title = "Overview of networked systems: 5+1 basic things that allow you understand computer networking."
 
 +++
 In the digital age most devices (over 10.07 billions on statistic of 2020 year [(statista.com)](https://www.statista.com/statistics/1183457/iot-connected-devices-worldwide/)) communicate with each other over computer networks. It could be computers, smartphones, printers, scanners etc, that connected through a transmission medium such as wires, cables.
@@ -82,3 +82,5 @@ TCP/IP contains 4 layers, whose payloads are also known as segments or datagrams
 \- TCP -- a connection-oriented protocol.
 \- User Datagram Protocol (UDP) -- a connectionless protocol.
 4\. Application layer -- includes the protocols used by most applications for providing user services or exchanging application data over the network connection established by the lower lever protocols.
+
+# Conclussion 
