@@ -24,9 +24,9 @@ Three main therms, that helps to describe computer network:
         - *Full Duplex* -- both nodes transmit and receive simultaneously.
 
 ## Ways of connections.
-The way of connection of nodes in a network called *topology*. Its could be simple connection between two nodes to comples layouts of nodes.
+The way of connection of nodes in a network called *topology*. Its could be simple connection between two nodes to complexs layouts of nodes.
 
-Base type of topology:
+Base types of topology:
 	1. Point-to-Point. Its type describet by **direct communication between two nodes** with a common link. Transfer data going in multiple ways: Simplex, Half Duplex or Full Duplex.
     ![point-to-point](https://www.myworkingnet.com/wp-content/uploads/2021/02/Point-to-Point-Network-Topology.png)
     2. Daisy Chain. Its series of point-to-point connections, when data going from sender to receiver through internal nodes (they called *hops*). 
