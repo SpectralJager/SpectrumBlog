@@ -76,7 +76,7 @@ The Transmission Control Protocol/Internet Protocol (TCP/IP) model is the concep
 
 TCP/IP contains 4 layers, whose payloads are also known as segments or datagrams:
 
-1\. Link layer -- operate within the scope of the local network conneciton to which a host is attached. Used to move packets between the Internet layer interfaces of two different hosts on the same link.
+1\. Link layer -- operate within the scope of the local network connection to which a host is attached. Used to move packets between the Internet layer interfaces of two different hosts on the same link.
 2\. Internet layer -- a group of protocols, methods and specifications that are used to transport network packets from original host to across network, if necessary, to the destination host specified by an IP address.
 3\. Transport layer -- establishes basic data channels that applications use for task-specific data exchange.
 \- TCP -- a connection-oriented protocol.
