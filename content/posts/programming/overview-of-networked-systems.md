@@ -44,3 +44,14 @@ Base types of topology:
 ![ISP](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Internet_Connectivity_Access_layer.svg/800px-Internet_Connectivity_Access_layer.svg.png)
 
 An ISP its an organization that provides a services as the access point or the gateway to the internet.
+
+Types of ISP:
+	1. Access providers -- provide Internet access.
+    2. Mailbox providers -- provide services for hosting electronic mail domains with access to storage for mail boxes.
+    3. Hosting ISPs -- email, web-hosting or online storage services (other may include virtual server, cloud services or physical server).
+    4. Transit ISPs -- *Access provider for Access provider*. ISPs themselves pay upstream ISPs for Internet access.
+    5. Virtual ISPs -- an operation that purchases services from another ISP.
+    6. Free ISPs -- a service provider that provide service free of charge.
+    7. Wireless ISP -- an Internet service provider with a network based on wireless networking.
+    
+# Open System Interconnection (OSI) and Transmission Control Protocol (TCP).
