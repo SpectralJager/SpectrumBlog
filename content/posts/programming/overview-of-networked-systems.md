@@ -36,13 +36,9 @@ The way of connection of nodes in a network called _topology_. It could be a sim
 Base types of topology:
 
 1. Point-to-Point. Its type is described by **direct communication between two nodes** with a common link. Transfer data going in multiple ways: Simplex, Half Duplex or Full Duplex.
-
 ![point-to-point](https://www.myworkingnet.com/wp-content/uploads/2021/02/Point-to-Point-Network-Topology.png)
-
 2. Daisy Chain. Its series of point-to-point connections, when data goes from sender to receiver through internal nodes (they are called _hops_).
-
 ![daisy chain](https://i.pinimg.com/originals/db/cc/d1/dbccd1be7e8731070d2fbf888a8807ae.png)
-
 3. Bus. It's when nodes share a common network link (known as _backbone_). All nodes get the same traffic and be accessed by any node.
 ![bus](https://i.pinimg.com/originals/d9/a9/74/d9a97433e7fff183ce32c70f80152720.png)
 4. Ring. Its closed loop of daisy chain. Transmission mode is simplex. Aggregate network bandwidth is bottlenecked by the weakest link between two nodes.
