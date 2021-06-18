@@ -18,10 +18,6 @@
   }
 }
 
-.article-body {
-  background-color: rgba(226, 226, 226, 0.9525);
-}
-
 .article-body .article-text img {
   display: block;
   max-width: 100%;
