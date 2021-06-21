@@ -2,7 +2,6 @@
 author = "Spectral Jager"
 categories = ["programming"]
 date = 2021-06-21T07:46:57Z
-draft = true
 img = "https://www.meme-arsenal.com/memes/fa883143a2e966b506f2f80b272a36d6.jpg"
 summary = "TCP allows you to reliably stream data between nodes on a network, because it overcomes the effects of packet loss or receiving packet out of order."
 tags = ["Networking", "TCP"]
